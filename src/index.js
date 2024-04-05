@@ -12,6 +12,42 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
+
+  let sydneyElement = document.querySelector("#sydney");
+  if (sydneyElement) {
+    let sydneyDateElement = sydneyElement.querySelector(".date");
+    let sydneyTimeElement = sydneyElement.querySelector(".time");
+    let sydneyTime = moment().tz("Australia/Sydney");
+
+    sydneyDateElement.innerHTML = sydneyTime.format("MMMM Do YYYY");
+    sydneyTimeElement.innerHTML = sydneyTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  let tahitiElement = document.querySelector("#tahiti");
+  if (tahitiElement) {
+    let tahitiDateElement = tahitiElement.querySelector(".date");
+    let tahitiTimeElement = tahitiElement.querySelector(".time");
+    let tahitiTime = moment().tz("Pacific/Tahiti");
+
+    tahitiDateElement.innerHTML = tahitiTime.format("MMMM Do YYYY");
+    tahitiTimeElement.innerHTML = tahitiTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  let parisElement = document.querySelector("#paris");
+  if (parisElement) {
+    let parisDateElement = parisElement.querySelector(".date");
+    let parisTimeElement = parisElement.querySelector(".time");
+    let parisTime = moment().tz("France/Paris");
+
+    parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
+    parisTimeElement.innerHTML = parisTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 function updateCity(event) {
