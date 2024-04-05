@@ -2,14 +2,15 @@
 
 function updateTime() {
   let losAngelesElement = document.querySelector("#los-angeles");
-  if (losAngelesElement) [];
-  let losAngelesDateElement = losAngelesElement.qurySelector(".date");
-  let losAngelesTimeElement = losAngelesElement.qurySelector(".time");
-  let losAngelesTime = moment().tz("America/Los_Angelese");
-  losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do YYYY");
-  losAngelesTimeElement.innerHTML = losAngelesTime.format(
-    "h:mm:ss [<small>]A[</small>]"
-  );
+  if (losAngelesElement) {
+    let losAngelesDateElement = losAngelesElement.qurySelector(".date");
+    let losAngelesTimeElement = losAngelesElement.qurySelector(".time");
+    let losAngelesTime = moment().tz("America/Los_Angeles");
+    losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do YYYY");
+    losAngelesTimeElement.innerHTML = losAngelesTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 function updateCity(event) {
